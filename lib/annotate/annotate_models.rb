@@ -150,7 +150,7 @@ module AnnotateModels
         col_type = get_col_type(col)
         attrs = get_attributes(col, col_type, klass, options)
         col_name = if with_comments?(klass, options) && col.comment
-                     "#{col.name}(#{col.comment.gsub(/\n/, "\\n")})"
+                     "#{col.name} - (#{col.comment.gsub(/\n/, "\\n")})"
                    else
                      col.name
                    end
